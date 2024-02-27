@@ -1,7 +1,8 @@
 # EXPERIMENT--01-ALP-FOR-8086
-Name :
-Roll no 
-Date of experiment :
+
+Name : Aravindhnath TR
+Roll no : 212222100005
+Date of experiment : 20/02/2024
 
 
 
@@ -77,31 +78,100 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 ## Programs for arithmetic  operations
 
-## Addition  of 8 bit ALP 
-
-
-
+## Addition  
+```python
+org 100h
+MOV al,11h;
+MOV bl,20h;
+ADD al,bl;
+MOV [6379h],al;
+ret
+```
 ## Output  
+ ![OUTPUT](Output1-pmc1.png)
  
-## Subtraction   of 8 bit numbers  ALP 
- 
-## Output  
-## Multiplication alp 
+## Subtraction 
+```python
+org 100h
+MOV al,20h;
+MOV bl,[8778h];
+SUB bl,al;
+MOV [8798h],bl;
+ret
+```
+## Output
+![OUTPUT](Output2-pmc1.png)
+
+## Multiplication
+```python
+org 100h
+MOV al,13h;
+MOV bl,2h;
+MUL bl;
+MOV [6063h],bl;
+ret
+```
  ## Output  
+![OUTPUT](Output3-pmc1.png)
 
-
-## Division alp 
-
+## Division
+```python
+org 100h
+MOV al,26h;
+MOV bl,[2369h];
+DIV bl;
+MOV [2399h],al;
+ret
+```
 ## Output  
+![OUTPUT](Output4-pmc1.png)
+## Programs for logical  operations
 
+## AND
+```python
+org 100h
+MOV bx,1000h;
+AND bx,1111h;
+MOV [0040h+02],bx;
+ret
+```
+## Output 
+![OUTPUT](Output5-pmc1.png)
+
+## OR
+```python
+org 100h
+MOV ax,[0070h];
+MOV bx,1000h;
+OR ax,bx;
+MOV [0060h],ax;
+ret
+```
+## Output
+![OUTPUT](Output6-pmc1.png)
+## NOT
+```python
+org 100h
+MOV bx,0060h;
+MOV ax,[bx]; 
+NOT al;
+MOV [0060h+04],ax;
+ret
+```
+## Output
+![OUTPUT](Output7-pmc1.png)
+
+## XOR
+```python
+org 100h
+MOV bx,0050h;
+MOV ax,[bx]; 
+XOR ax,bx;
+MOV [0050h+03],ax;
+ret
+```
+## Output
+![OUTPUT](Output8-pmc1.png)
 
 ## Result :
- 
-
-
-
-
-
-
-
-
+Thus, ALP for fundamental arithmetic and logical operations are executed successfully.
